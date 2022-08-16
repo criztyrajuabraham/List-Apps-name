@@ -1,0 +1,15 @@
+{% extends 'extra.html' %}
+
+{% block button %}
+
+<h1>ADD FILMS</h1>
+
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+     <input type="text" name="name" placeholder="Enter film name">
+     <input type="text" name="desc" placeholder="Enter film description">
+     <input type="text" name="year" placeholder="Enter release date">
+     <input type="file" name="img"><br>
+     <input type="submit">
+</form>
+{% endblock %}
